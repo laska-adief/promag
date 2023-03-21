@@ -1,0 +1,71 @@
+.dialog-header {
+  height: 36px;
+}
+.close-icon {
+  background-color: rgb(236, 0, 0);
+  color: white;
+  float: right;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+}
+
+::ng-deep .mat-dialog-container, 
+.dialog-container {
+  background: #d8d8d8;
+}
+
+.inside-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.side-container {
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.img-item {
+  width: 100%;
+  height: fit-content;
+}
+
+.item-content {
+  align-items: center;
+}
+
+.form-field {
+  margin-left: 1rem;
+  width: 95%;
+}
+
+textarea {
+  resize: none;
+}
+
+.button-action {
+  margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.button {
+  width: 100px;
+  color: white;
+}
+.red {
+  background: red;
+}
+
+.green {
+  background: rgb(0, 208, 0);
+}
+
+.edit-button-input {
+  cursor: pointer;
+}

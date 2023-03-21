@@ -1,0 +1,19 @@
+<div class="login-container">
+  <div class="login-form" [formGroup]="loginForm">
+    <mat-form-field appearance="outline" class="login-input">
+      <input matInput placeholder="username" type="text" formControlName="username" />
+      <mat-error *ngIf="(loginForm.get('username')?.touched || loginForm.get('username')?.dirty)">
+        <span *ngIf="loginForm.get('username')?.hasError('required')">{{"Field is required"}}</span>
+        <span *ngIf="loginForm.get('username')?.hasError('invalidUsername')">{{"Username is Invalid"}}</span>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="login-input">
+      <input matInput placeholder="password" type="password" formControlName="password" />
+      <mat-error *ngIf="(loginForm.get('password')?.touched || loginForm.get('password')?.dirty)">
+        <span *ngIf="loginForm.get('password')?.hasError('required')">{{"Field is required"}}</span>
+        <span *ngIf="loginForm.get('password')?.hasError('invalidPassword')">{{"password is Invalid"}}</span>
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button type="submit" class="login-button" (click)="login()">Login</button>
+  </div>
+</div>

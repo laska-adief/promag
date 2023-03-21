@@ -1,0 +1,136 @@
+{
+  "assets": [
+    {
+      "id": 13,
+      "name": "asset 4",
+      "serialNumber": "as01",
+      "type": "a1",
+      "modelNumber": "4md3",
+      "manufacturer": "lorem",
+      "location_id": "2",
+      "status": "stopped",
+      "url_photo": "https://cdn.britannica.com/77/170477-050-1C747EE3/Laptop-computer.jpg",
+      "location": "Yogyakarta"
+    },
+    {
+      "id": 123,
+      "name": "asset 4",
+      "serialNumber": "as01",
+      "type": "a1",
+      "modelNumber": "4md3",
+      "manufacturer": "lorem",
+      "location_id": "3",
+      "status": "stopped",
+      "url_photo": "https://cdn.britannica.com/77/170477-050-1C747EE3/Laptop-computer.jpg",
+      "location": "Yogyakarta"
+    },
+    {
+      "id": "2123",
+      "name": "ds",
+      "type": "sdf",
+      "serialNumber": "sdf",
+      "location_id": "fds",
+      "modelNumber": "fsdfds",
+      "manufacturer": "fds",
+      "status": "maintenance",
+      "url_photo": null
+    },
+    {
+      "id": "99",
+      "name": "computer maxa",
+      "type": "max2",
+      "serialNumber": "hsadiu7",
+      "location_id": "2",
+      "modelNumber": "uashd8",
+      "manufacturer": "sdai",
+      "status": "stopped",
+      "url_photo": null
+    }
+  ],
+  "spareparts": [
+    {
+      "id": 8,
+      "name": "sparepart 1",
+      "type": "type 2",
+      "modelNumber": "sp01",
+      "manufacturer": "amet",
+      "quantity": 2,
+      "location_id": "1",
+      "status": "empty",
+      "url_photo": "https://cdn.britannica.com/77/170477-050-1C747EE3/Laptop-computer.jpg"
+    },
+    {
+      "id": 18,
+      "name": "sparepart 51",
+      "type": "type 21",
+      "modelNumber": "sp01",
+      "manufacturer": "ametcha",
+      "quantity": 2,
+      "location_id": "2",
+      "status": "empty",
+      "url_photo": null
+    },
+    {
+      "id": "423",
+      "name": "sparepat2",
+      "type": "i",
+      "modelNumber": "sad",
+      "manufacturer": "12",
+      "quantity": "12",
+      "location_id": "2",
+      "status": "empty",
+      "url_photo": "http://2.bp.blogspot.com/-46_7hRWjOy8/VMJBqK69vLI/AAAAAAAABKw/vcuk-6weYd8/s1600/002-apa-perbedaan-bedanya-komputer-pc-mac.jpg"
+    }
+  ],
+  "configurations": [
+    {
+      "id": 21,
+      "name": "configur 1",
+      "type": "cf1",
+      "details": "lsalkdasdnhasnd uas diua daisu dgiasugdiasud"
+    },
+    {
+      "id": "11",
+      "name": "configuration maydenaas",
+      "type": "AB",
+      "details": "lroenasb dbahs daisu diaus daisud iasudasd lroenasb dbahs daisu d"
+    }
+  ],
+  "histories": [
+    {
+      "id": 1,
+      "createdAt": "Wed Mar 25 2022 07:00:00 GMT+0700 (Western Indonesia Time)",
+      "title": "History Title",
+      "user": "ipsum",
+      "details": "lsalkdasdnhasnd uas diua daisu dgiasugdiasud"
+    },
+    {
+      "id": 2,
+      "createdAt": "Wed Mar 21 2022 09:00:00 GMT+0700 (Western Indonesia Time)",
+      "title": "History Title",
+      "user": "ipsum",
+      "details": "lsalkdasdnhasnd uas diua daisu dgiasugdiasud"
+    },
+    {
+      "id": 3,
+      "createdAt": "Wed Mar 18 2022 10:00:00 GMT+0700 (Western Indonesia Time)",
+      "title": "History Title",
+      "user": "ipsum",
+      "details": "lsalkdasdnhasnd uas diua daisu dgiasugdiasud"
+    }
+  ],
+  "locations": [
+    {
+      "locationId": "1",
+      "name": "Yogyakarta"
+    },
+    {
+      "locationId": "2",
+      "name": "Jakarta"
+    },
+    {
+      "locationId": "3",
+      "name": "Bandung"
+    }
+  ]
+}

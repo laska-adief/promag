@@ -1,0 +1,51 @@
+<div class="container">
+  <p class="title">{{title}}</p>
+  <div class="action-container">
+    <div class="left-button">
+      <mat-form-field appearance="outline">
+        <input matInput type="text" placeholder="search" #searchValue>
+      </mat-form-field>
+      <button mat-raised-button class="search-button" (click)="search(searchValue)">Search</button>
+    </div>
+    <div class="right-button">
+      <button mat-raised-button>Downlad<mat-icon>download</mat-icon></button>
+      <button mat-raised-button (click)="buttonSortData(sortDataProperty)">Sort<mat-icon>filter_alt</mat-icon></button>
+      <button mat-raised-button class="add-button" *ngIf="isDisplayAddButton"
+        (click)="addItem()">{{buttonAddText}}</button>
+    </div>
+  </div>
+  <div>
+    <table mat-table [dataSource]="dataSource" matSort #table class="mat-elevation-z8">
+      <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header (click)="sortData(column.columnDef)">
+          {{column.header}}
+        </th>
+        <td mat-cell *matCellDef="let row" (click)="detailItem(row)" class="clickable">
+          <ng-container [ngSwitch]="column.columnDef">
+            <ng-container *ngSwitchCase="'status'">
+              <ng-container *ngIf="data === 'sparepart'">
+                <div class="status"
+                  [ngClass]="{'red':column.cell(row) === 'empty', 'green':column.cell(row) === 'full', 'orange':column.cell(row) === 'notfull'}">
+                  {{column.cell(row)}}
+                </div>
+              </ng-container>
+              <ng-container *ngIf="data === 'asset'">
+                <div class="status"
+                  [ngClass]="{'red':column.cell(row) === 'stopped', 'green':column.cell(row) === 'active', 'orange':column.cell(row) === 'maintenance'}">
+                  {{column.cell(row)}}
+                </div>
+              </ng-container>
+            </ng-container>
+            <ng-container *ngSwitchCase="'createdAt'">
+              {{column.cell(row) | date}}
+            </ng-container>
+            <ng-container *ngSwitchDefault>{{column.cell(row)}}</ng-container>
+          </ng-container>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

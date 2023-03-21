@@ -1,0 +1,17 @@
+<div class="sidenav">
+  <div class="top-menu">
+    <img src="./../../../assets/images/user.jpg" class="img-profile" alt="photo profile">
+    <p class="name-profile">
+      {{'laska adief'}}
+    </p>
+    <div class="menu-icon">
+      <mat-icon [routerLink]="'home'">home</mat-icon>
+      <mat-icon (click)="logout()">logout</mat-icon>
+    </div>
+  </div>
+  <div class="middle-menu">
+    <button mat-raised-button class="button-menu" [routerLink]="'assets'">Assets</button>
+    <button mat-raised-button class="button-menu" [routerLink]="'spareparts'">Spare Parts</button>
+    <button mat-raised-button class="button-menu" [routerLink]="'configurations'">Configurations</button>
+  </div>
+</div>

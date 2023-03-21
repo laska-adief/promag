@@ -1,0 +1,49 @@
+<div class="dialog-header">
+  <div class="close-icon">
+    <mat-icon (click)="closeDialog()">close</mat-icon>
+  </div>
+</div>
+<mat-dialog-content class="dialog-container">
+  <div class="grid container">
+    <div class="row inside-container" [formGroup]="itemForm">
+      <div class="col-md-5 side-container" *ngIf="dialogData.url_photo">
+        <img class="img-item" [src]="dialogData?.url_photo" alt="item picture">
+      </div>
+      <div class="col-md-4 side-container" *ngIf="(dialogData.action === 'add') && dialogData.data !== 'configuration'">
+        <input matInput placeholder="url photo" formControlName="url_photo">
+      </div>
+      <div class="side-container"
+        [ngClass]="{'col-md-6 ': dialogData.data !== 'configuration', 'col-md-12': dialogData.data === 'configuration'}">
+        <div class="grid">
+          <div class="row item-content">
+            <ng-container *ngFor="let data of dialogData.displayedItemDetail">
+              <div [ngClass]="{'col-md-4 ': dialogData?.url_photo, 'col-md-2': !dialogData?.url_photo}">{{data.key}}
+              </div>
+              <div [ngClass]="{'col-md-6 ': dialogData?.url_photo, 'col-md-9': !dialogData?.url_photo}">
+                <ng-container *ngIf="dialogData.data === 'configuration' && data.key === 'Details'; else normalInput">
+                  <mat-form-field class="form-field">
+                    <textarea matInput [value]="data.value" rows="5" [formControlName]="data.inputName"></textarea>
+                  </mat-form-field>
+                </ng-container>
+                <ng-template #normalInput>
+                  <mat-form-field class="form-field">
+                    <input matInput [value]="data.value ? data.value : ''" [formControlName]="data.inputName">
+                  </mat-form-field>
+                </ng-template>
+              </div>
+              <div [ngClass]="{'col-md-2 ': dialogData?.url_photo, 'col-md-1': !dialogData?.url_photo}"
+                class="edit-button-input" *ngIf="dialogData.action === 'view' && data.inputName !== 'id'">
+                <mat-icon (click)="editInputItem(data.inputName)">edit</mat-icon>
+              </div>
+            </ng-container>
+            <div class="button-action">
+              <button mat-raised-button class="button green" (click)="onSaveItem()">Save</button>
+              <button mat-raised-button class="button red" *ngIf="dialogData.action !== 'add'"
+                (click)="onDeleteItem(dialogData?.data, dialogData.id)">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>

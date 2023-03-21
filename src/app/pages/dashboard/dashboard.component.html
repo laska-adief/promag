@@ -1,0 +1,22 @@
+<div class="grid container-perdisplay">
+  <div class="row cards">
+    <div class="card col-lg-6">
+      <app-mini-table-display [data]="'sparepart'" [title]="titleEmptySpareParts" [columns]="columnsEmptySpareParts"
+        [displayedColumns]="displayedColumnsEmptySpareParts"
+        [dataSource]="dataSourceEmptySpareParts"></app-mini-table-display>
+    </div>
+    <div class="card col-lg-6">
+      <app-mini-table-display [data]="'asset'" [title]="titleInactiveAssets" [columns]="columnsInactiveAssets"
+        [displayedColumns]="displayedColumnsInactiveAssets"
+        [dataSource]="dataSourceInactiveAssets"></app-mini-table-display>
+    </div>
+  </div>
+</div>
+
+<div class="grid container-perdisplay">
+  <div class="row">
+    <div class="col">
+      <app-history></app-history>
+    </div>
+  </div>
+</div>

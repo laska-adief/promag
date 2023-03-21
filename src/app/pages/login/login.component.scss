@@ -1,0 +1,31 @@
+.login-container {
+  width: 100wh;
+  height: 100vh;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 300px;
+}
+
+.login-input{
+  width: 300px;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: white;
+  border-radius: 5px;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick{
+  color: #5ab7ff !important;
+}
+
+.login-button {
+  float: right;
+  background: #5ab7ff;
+  color: white;
+}

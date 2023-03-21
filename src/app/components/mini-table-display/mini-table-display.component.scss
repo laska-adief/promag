@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+::ng-deep thead {
+  background: rgb(229, 229, 229) !important;
+  & th {
+    text-align: center !important;
+    font-weight: 600 !important;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sort-button {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.status {
+  text-align: center;
+  border-radius: 4px;
+  color: white;
+}
+
+.red{
+  background: red;
+}
+.green{
+  background: green;
+}
+.orange{
+  background: orange;
+}

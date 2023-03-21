@@ -1,0 +1,74 @@
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+::ng-deep thead {
+  background: rgb(229, 229, 229) !important;
+  & th {
+    text-align: center !important;
+    font-weight: 600 !important;
+  }
+}
+
+::ng-deep .mat-sort-header-container {
+  justify-content: center;
+}
+
+::ng-deep tbody {
+  & td {
+    text-align: center !important;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.action-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+
+.search-button {
+  margin-left: 1rem !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  top: 15px !important;
+}
+
+.right-button {
+  & button {
+    margin-left: 1rem;
+  }
+}
+
+.add-button {
+  background: #1bc47d;
+  color: white;
+}
+
+.status {
+  text-align: center;
+  border-radius: 4px;
+  color: white;
+}
+
+.red{
+  background: red;
+}
+.green{
+  background: #1bc47d;
+}
+.orange{
+  background: orange;
+}
+
+.clickable {
+  cursor: pointer;
+}

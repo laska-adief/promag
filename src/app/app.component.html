@@ -1,0 +1,10 @@
+<div class="container-app">
+  <div class="sidenav">
+    <app-sidenav *ngIf="authService.isLogin()"></app-sidenav>
+  </div>
+  <div class="content">
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

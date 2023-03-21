@@ -1,0 +1,16 @@
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  width:48%;
+  background: #f3f3f3;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0px 3px 10px rgba($color: #959595, $alpha: .5);
+}
+
+.container-perdisplay {
+  margin-bottom: 5rem !important;
+}
